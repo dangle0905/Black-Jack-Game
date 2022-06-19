@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- meta tag speficies the character encdoing for the html document -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Jack</title>
+        
+        <!-- this link tag defines the relationship between the current document and an externa resource -->
+        <!-- the rel attribute defines the relationship between a linked resource and the current document -->
+        <!-- The href attribute specifies the URL of the page the link goes to -->
+        <link rel="stylesheet" href="blackjack.css">
+        
+        <!-- this links our blackjack.js javascript file to this html file -->
+        <!-- the src attribute specifies the location (URL) of the external source -->
+        <script src="blackjack.js"></script>
+    </head>
+
+    <body>
+        <h2>Dealer: <span id="dealer-sum"></span></h2>
+        <!-- div tag defines a division or a section in thml -->
+        <div id ="dealer-cards">
+            <img id="hidden" src="./cards/BACK.png">
+        </div>
+
+        <h2>You: <span id="your-sum"></span></h2>
+        <div id ="your-cards"></div>
+
+        <!-- this is a break line tag -->
+        <br>
+
+        <button id = "hit">Hit</button>
+        <button id = "stay">Stay</button>
+        <p id = "results"></p>
+    </body>
+</html>
