@@ -89,6 +89,7 @@ function startGame(){
     //for the buttons now
     document.getElementById("hit").addEventListener("click", hit);
     document.getElementById("stay").addEventListener("click", stay);
+    document.getElementById("replay").addEventListener("click", );
 
 }
 
