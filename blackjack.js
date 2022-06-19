@@ -52,7 +52,7 @@ function shuffleDeck(){
 function startGame(){
     hidden = deck.pop();
     dealerSum += getValue(hidden);
-    dealerAceCount += checkAcre(hidden);
+    dealerAceCount += checkAce(hidden);
 
     // console.log(dealerSum);
     // console.log(dealerAceCount);
@@ -65,7 +65,7 @@ function startGame(){
         //we set the path for the img tag src attribute
         cardImg.src = "./cards/" + card + ".png";
         dealerSum += getValue(card);
-        dealerAceCount += checkAcre(card);
+        dealerAceCount += checkAce(card);
         //appending card with while loop
         document.getElementById("dealer-cards").append(cardImg);
     }
@@ -80,7 +80,7 @@ function startGame(){
         //we set the path for the img tag src attribute
         cardImg.src = "./cards/" + card + ".png";
         yourSum += getValue(card);
-        yourAceCount += checkAcre(card);
+        yourAceCount += checkAce(card);
         //appending card with while loop
         document.getElementById("your-cards").append(cardImg);
     }
@@ -88,7 +88,7 @@ function startGame(){
     console.log(yourSum);
     //for the buttons now
     document.getElementById("hit").addEventListener("click", hit);
-    document.getElementById("stay").addEventListener("stay", stay);
+    document.getElementById("stay").addEventListener("click", stay);
 
 }
 
@@ -97,9 +97,11 @@ function stay(){
     yourSum = reduceAce(yourSum, yourAceCount);
 
     canHit = false;
+    //flip the deallers card
     document.getElementById("hidden").src = "./cards/" + hidden + ".png";
 
     let message = "";
+
     if(yourSum > 21){
         message = "You Lose";
     }
@@ -118,7 +120,7 @@ function stay(){
 
     //sending message into html doucment
     document.getElementById("dealer-sum").innerText = dealerSum;
-    document.getElementById("your-sum").innerText=yourSum;
+    document.getElementById("your-sum").innerText= yourSum;
     document.getElementById("results").innerText = message;
 }
 
@@ -133,7 +135,7 @@ function hit(){
     //we set the path for the img tag src attribute
     cardImg.src = "./cards/" + card + ".png";
     yourSum += getValue(card);
-    yourAceCount += checkAcre(card);
+    yourAceCount += checkAce(card);
     //appending card with while loop
     document.getElementById("your-cards").append(cardImg);
 
