@@ -1,0 +1,19 @@
+{
+  "name": "black-jack-project",
+  "version": "1.0.0",
+  "description": "black jack game ",
+  "main": "blackjack.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangle0905/Black-Jack-Game.git"
+  },
+  "author": "Dang Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dangle0905/Black-Jack-Game/issues"
+  },
+  "homepage": "https://github.com/dangle0905/Black-Jack-Game#readme"
+}
